@@ -1,0 +1,2 @@
+C:\Users\Developers\Documents\ashwin\SpacesXR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Developers\Documents\ashwin\SpacesXR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

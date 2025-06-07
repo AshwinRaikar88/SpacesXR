@@ -1258,7 +1258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5e7045ec6a31048afad1c854a0d6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpawnWithAnchor: 1
   m_SpawnAsPersistentAnchor: 1
   m_LoadSavedAnchorsOnStart: 0
   m_ObjectSelectorDropdown: {fileID: 0}
@@ -2359,6 +2358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382a7d029b7cc7a4c985d053963fc9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_OcclusionManager: {fileID: 0}
   m_PlaneManager: {fileID: 5497310570242624798}
   m_PlaneVisualsEnabled: 1
   m_BoundingBoxManager: {fileID: 2223443224497048495}

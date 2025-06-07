@@ -20,9 +20,9 @@ public class SimpleObjectSpawner : MonoBehaviour
     [SerializeField]
     private int scaleDivisions = 100;    
     [SerializeField]
-    private float minScale = 0.1f;
+    public float minScale = 0.1f;
     [SerializeField]
-    private float maxScale = 5f;       
+    public float maxScale = 5f;       
     private float scaleStep;
     private bool autoRotate = true;
 
@@ -31,7 +31,7 @@ public class SimpleObjectSpawner : MonoBehaviour
     // [SerializeField] private string prefabName;
 
     [Tooltip("Distance in front of the camera to spawn the object.")]
-    [SerializeField] private float spawnDistance = -2f;
+    [SerializeField] private float spawnDistance = -30f;
 
     [Tooltip("Camera the object should spawn in front of. Defaults to main camera.")]
     [SerializeField] private Camera cameraToFace;
@@ -46,7 +46,7 @@ public class SimpleObjectSpawner : MonoBehaviour
     [SerializeField] private float yRotationRange = 45f;
 
 
-    private GameObject spawnedObject;
+    public GameObject spawnedObject;
 
     private string lastSpawnedPrefabName;
 
@@ -85,8 +85,10 @@ public class SimpleObjectSpawner : MonoBehaviour
             return;
         }
 
-        Vector3 spawnPoint = cameraToFace.transform.position + cameraToFace.transform.forward * spawnDistance;
-        Vector3 spawnNormal = -cameraToFace.transform.forward;
+        Vector3 offsetRotatedDirection = Quaternion.AngleAxis(yRotationRange, Vector3.up) * cameraToFace.transform.forward;
+
+        Vector3 spawnPoint = cameraToFace.transform.position + offsetRotatedDirection * spawnDistance;
+        Vector3 spawnNormal = -offsetRotatedDirection;
 
         // If the same prefab is already spawned, just move and rotate it
         if (spawnedObject != null && prefabName == lastSpawnedPrefabName)

@@ -4,7 +4,7 @@ using UnityEngine.XR.Management;
 
 public class TwoHandPinchScaler : MonoBehaviour
 {
-    private SimpleObjectSpawner spawner;
+    private SimpleObjectSpawner spawner;    
     private XRHandSubsystem handSubsystem;
 
     private bool isLeftPinching = false;
@@ -23,7 +23,7 @@ public class TwoHandPinchScaler : MonoBehaviour
 
     void Update()
     {
-        if (spawner == null || spawner.spawnedObject == null || handSubsystem == null)
+        if (spawner == null || spawner.spawnedObject == null || handSubsystem == null || !spawner.isMagicScaleEnabled)
             return;
 
         XRHand leftHand = handSubsystem.leftHand;

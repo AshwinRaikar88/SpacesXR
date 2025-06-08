@@ -11,20 +11,16 @@ public class SimpleObjectSpawner : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField]
     private Slider scaleSlider;
+    public bool isMagicScaleEnabled = false;
 
-     [Header("Scaling Settings")]
-    [SerializeField]
-    private int rotationSpeed = 500;
-    [SerializeField]
-    private int rotationSpeedAuto = 10;
-    [SerializeField]
-    private int scaleDivisions = 100;    
+    [Header("Scaling Settings")]
+    [SerializeField]    
+    private int scaleDivisions = 100;
     [SerializeField]
     public float minScale = 0.1f;
     [SerializeField]
-    public float maxScale = 5f;       
-    private float scaleStep;
-    private bool autoRotate = true;
+    public float maxScale = 5f;
+    private float scaleStep;    
 
     [Header("Spawn Settings")]
     // [Tooltip("The name of the prefab to load from the Resources folder.")]
@@ -158,7 +154,7 @@ public class SimpleObjectSpawner : MonoBehaviour
             {
                 scaleSlider.value = scale.x;
             }
-        }    
+        }
     }
 
     public void ScaleDown()
@@ -170,12 +166,12 @@ public class SimpleObjectSpawner : MonoBehaviour
             scale -= Vector3.one * scaleStep;
             scale = Vector3.Max(scale, Vector3.one * minScale);
             interactable.SetTargetLocalScale(scale);
-            
+
             if (scaleSlider != null)
             {
                 scaleSlider.value = scale.x;
             }
-        }    
+        }
     }
 
     public void Despawn()
@@ -188,6 +184,30 @@ public class SimpleObjectSpawner : MonoBehaviour
         else
         {
             Debug.LogWarning("No object to despawn.");
+        }
+    }
+    
+    public void ToggleChildCollider(bool enable)
+    {
+        isMagicScaleEnabled = !enable;
+
+        if (spawnedObject == null)
+        {
+            Debug.LogWarning("No object has been spawned.");
+            return;
+        }
+
+        // Find the first Collider in children (excluding the root)
+        Collider childCollider = spawnedObject.GetComponentInChildren<Collider>();
+
+        if (childCollider != null && childCollider.gameObject != spawnedObject)
+        {
+            childCollider.enabled = enable;
+            Debug.Log($"Child collider on '{childCollider.gameObject.name}' has been {(enable ? "enabled" : "disabled")}.");
+        }
+        else
+        {
+            Debug.LogWarning("No child collider found or collider belongs to root object.");
         }
     }
 }

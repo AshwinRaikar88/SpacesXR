@@ -38,7 +38,7 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: Bionanomics'
+    - line: '|   companyName: BioNanomics'
     - line: '|   productName: SpacesXR'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
@@ -181,6 +181,12 @@ MonoBehaviour:
     - line: '|   - {instanceID: 0}'
     - line: '|   - {fileID: 11400000, guid: 6c9339404e04741eabc7caa21f63ee46, type:
         2}'
+    - line: '|   - {fileID: 11400000, guid: 56a98106ce58f09459a9990007b50acb, type:
+        2}'
+    - line: '|   - {fileID: -3728528452315536981, guid: 2462f957eee75f940a3393fd6f039795,
+        type: 2}'
+    - line: '|   - {fileID: -2264778514210020867, guid: 136958f90a130274b8b70a31eed352fb,
+        type: 2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'
@@ -1073,7 +1079,7 @@ MonoBehaviour:
         m_ExportAsGoogleAndroidProject: 0
         m_DebugSymbolLevel: 1
         m_DebugSymbolFormat: 5
-        m_CurrentDeploymentTargetId: 2G0YC5ZH04023Z
+        m_CurrentDeploymentTargetId: __builtin__target_default
         m_BuildType: 2
         m_BuildAppBundle: 0
         m_IPAddressToConnect: 

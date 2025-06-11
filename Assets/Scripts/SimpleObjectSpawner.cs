@@ -41,7 +41,6 @@ public class SimpleObjectSpawner : MonoBehaviour
     [Tooltip("Y rotation range in degrees.")]
     [SerializeField] private float yRotationRange = 45f;
 
-
     public GameObject spawnedObject;
 
     private string lastSpawnedPrefabName;
@@ -65,13 +64,6 @@ public class SimpleObjectSpawner : MonoBehaviour
             scaleSlider.value = 0.001f;
         }
     }
-
-    // void Start()
-    // {
-    //     if (scaleSlider != null)
-    //         scaleSlider.onValueChanged.AddListener(OnSliderChanged);   
-    // }
-
 
     public void Spawn(string prefabName)
     {

@@ -1,0 +1,36 @@
+{
+  "molecules": [
+    {
+      "title": "8c5c chain",
+      "prefabName": "8C5C-surf-chain-vis_NIH3D",
+      "description": "8c5c-surf-bychain-vis. Molecular surface representation with each biopolymer chain a different color. microtubule decorated with tubulin oligomers in presence of APC C-terminal domain. (here only map corresponding to the 13-pf microtubule is represented)"
+    },
+    {
+      "title": "8c5c surf",
+      "prefabName": "8C5C-surf-vis_NIH3D",
+      "description": "8c5c-surf-vis. Monochrome molecular surface representation. microtubule decorated with tubulin oligomers in presence of APC C-terminal domain. (here only map corresponding to the 13-pf microtubule is represented)"
+    },
+    {
+      "title": "Birch Pollen",
+      "prefabName": "pfas_birch_comparison_ITH",
+      "description": "Birch Pollen Food Syndrome: Pollen Food Syndrome (PFS), also known as Oral Allergy Syndrome, occurs when the immune system reacts to proteins in certain foods that resemble pollen allergens, causing symptoms like itching and swelling in the mouth and throat. The birch pollen allergen Bet v 1 has a structure similar to antigens found in peaches, apples, celery, cherries, carrots, and kiwis. This structural similarity can cause cross-reactivity, leading to allergic reactions when consuming these foods."
+    },
+    {
+      "title": "Stem Ferritin Nanoparticle",
+      "prefabName": "StemFerritinITH",
+      "description": "This potential Universal Vaccine uses only the Hemagglutinin (HA) Stem region, which is relatively constant between Influenza strains. The particle consists an iron-carrying spherical nanoparticle formed by a naturally occurring protein called Ferritin. Ferritin chains fused to HA Stem regions spontaneously come together to produce a particle with eight HA Stems projecting from its surface. Promoting an immune response towards a region that doesn't significantly vary between Influenza strains can potentially protect against most/all of them. According to a recent NIAID Now blog post, a vaccine based on this structure known as H1ssF (influenza H1 hemagglutinin stabilized stem ferritin nanoparticle vaccine) is currently performing well in clinical trials: A Widge, et al. An Influenza Hemagglutinin Stem Nanoparticle 1 Vaccine Induces Cross Group 1 Neutralizing Antibodies in Healthy Adults. Science Translational Medicine DOI: 10.1126/scitranslmed.ade4790 (2023)."
+    },
+    {
+      "title": "HIV Reverse Transcriptase with AZT and Etravirine",
+      "prefabName": "RT",
+      "description": "The reverse transcriptase (RT) structure with AZT bound was built in ChimeraX from PDB 3V41.  PDB 3MEC of RT with Etravidine/TMC125 bound was aligned to 3V41 using the mmaker function.  RT from 3MEC was removed. The polymerase domain was colored according to the following residues: fingers  1-85 and 118-155,  palm 86-117 and 156-236, thumb 237-318, and connection 319-426.  The active site was defined as D110, D185, and D186 of p66."
+    },
+    {
+      "title": "Poliovirus type 3 (strain Saukett)",
+      "prefabName": "PV3SC8",
+      "description": "This structure represents a stabilized virus-like particle (VLP) of Poliovirus type 3, strain Saukett, known as PV3 SC8. VLPs mimic the native virus structure without containing viral genetic material, making them non-infectious yet immunogenic. PV3 SC8 has been engineered for enhanced thermal stability and structural integrity, enabling its use in next-generation polio vaccines. The particle retains key antigenic features necessary for triggering an immune response, contributing to safer and more stable vaccine formulations for global polio eradication efforts."
+    }
+
+    
+  ]
+}

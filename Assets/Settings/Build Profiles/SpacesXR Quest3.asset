@@ -42,10 +42,11 @@ MonoBehaviour:
     - line: '|   productName: SpacesXR'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
-    - line: '|   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}'
+    - line: '|   m_SplashScreenBackgroundColor: {r: 0.07058824, g: 0.29411766, b:
+        0.43529412, a: 1}'
     - line: '|   m_ShowUnitySplashScreen: 1'
     - line: '|   m_ShowUnitySplashLogo: 1'
-    - line: '|   m_SplashScreenOverlayOpacity: 1'
+    - line: '|   m_SplashScreenOverlayOpacity: 0'
     - line: '|   m_SplashScreenAnimation: 1'
     - line: '|   m_SplashScreenLogoStyle: 0'
     - line: '|   m_SplashScreenDrawMode: 1'
@@ -66,13 +67,16 @@ MonoBehaviour:
     - line: '|     width: 1'
     - line: '|     height: 1'
     - line: '|   m_SplashScreenLogos:'
+    - line: '|   - logo: {fileID: 21300000, guid: e5e392b2ef230499096d1cc91466b52b,
+        type: 3}'
+    - line: '|     duration: 3'
     - line: '|   - logo: {fileID: 21300000, guid: b7625a1504c6e4ec0903ad2b8b499e85,
         type: 3}'
-    - line: '|     duration: 5'
+    - line: '|     duration: 2'
     - line: '|   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000,
         type: 0}'
-    - line: '|     duration: 5'
-    - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: b7625a1504c6e4ec0903ad2b8b499e85,
+    - line: '|     duration: 2'
+    - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: e5e392b2ef230499096d1cc91466b52b,
         type: 3}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
     - line: '|   defaultScreenWidth: 1024'
@@ -181,12 +185,6 @@ MonoBehaviour:
     - line: '|   - {instanceID: 0}'
     - line: '|   - {fileID: 11400000, guid: 6c9339404e04741eabc7caa21f63ee46, type:
         2}'
-    - line: '|   - {fileID: 11400000, guid: 56a98106ce58f09459a9990007b50acb, type:
-        2}'
-    - line: '|   - {fileID: -3728528452315536981, guid: 2462f957eee75f940a3393fd6f039795,
-        type: 2}'
-    - line: '|   - {fileID: -2264778514210020867, guid: 136958f90a130274b8b70a31eed352fb,
-        type: 2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'

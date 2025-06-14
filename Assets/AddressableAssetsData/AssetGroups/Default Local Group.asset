@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: 5bc4be6e7b0ef4ca3b2bc7ef68af6687
+  m_SerializeEntries:
+  - m_GUID: 1d03ed7225a4f40598ee16156e1e4032
+    m_Address: Prefabs/RT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1db882205c1ed40c8b33a2e1a3054ea5
+    m_Address: Prefabs/pfas_birch_comparison_ITH
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b625032ec06246fba0dec7966b55464
+    m_Address: Prefabs/StemFerritinITH
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b1c64f0a8da34d1581d585e20d88e5a
+    m_Address: Prefabs/8c5c
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dde0f1a8a6e2947f2a9b23cef4918eb7
+    m_Address: Prefabs/PV3SC8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 94ffa7d16f4304f0284211d16a341b0c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 84001a2d546b043ea91af3f82881ac54, type: 2}
+    - {fileID: 11400000, guid: 655dce23c3d9f4101871cd88d5176799, type: 2}
+    - {fileID: 11400000, guid: 4cce855221d744203bc1bdbc58265c7f, type: 2}

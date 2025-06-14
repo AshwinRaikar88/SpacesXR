@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 public class NewObjectSpawner : MonoBehaviour
 {
 
@@ -74,76 +75,49 @@ public class NewObjectSpawner : MonoBehaviour
     // }
 
 
-    public void Spawn(string prefabName)
+    public void SpawnAsync(string prefabAddress)
     {
-        if (string.IsNullOrEmpty(prefabName))
-        {
-            Debug.LogWarning("Prefab name is not set.");
-            return;
-        }
+        if (string.IsNullOrEmpty(prefabAddress)) return;
 
         Vector3 spawnPoint = fixedSpawnPoint.position;
-        Quaternion spawnRotation = Quaternion.LookRotation(fixedSpawnPoint.forward, Vector3.up);
+        Quaternion spawnRotation = Quaternion.LookRotation(cameraToFace.transform.forward, Vector3.up);
 
-
-        // If the same prefab is already spawned, just move and rotate it
-        if (spawnedObject != null && prefabName == lastSpawnedPrefabName)
-        {
-            spawnedObject.transform.position = spawnPoint;
-            spawnedObject.transform.rotation = Quaternion.LookRotation(cameraToFace.transform.forward, Vector3.up);
-
-            if (randomYRotation)
-            {
-                float randomY = UnityEngine.Random.Range(-yRotationRange, yRotationRange);
-                spawnedObject.transform.Rotate(Vector3.up, randomY);
-            }
-
-            Debug.Log($"Moved existing prefab '{prefabName}' to new position.");
-            return;
-        }
-
-        // Load the prefab
-        GameObject prefabToSpawn = Resources.Load<GameObject>($"Prefabs/{prefabName}");
-        if (prefabToSpawn == null)
-        {
-            Debug.LogError($"Prefab '{prefabName}' not found in Resources.");
-            return;
-        }
-
-        // Destroy old object if different
-        if (spawnedObject != null)
+        // Destroy existing if different
+        if (spawnedObject != null && lastSpawnedPrefabName != prefabAddress)
         {
             Destroy(spawnedObject);
         }
 
-        GameObject spawned = Instantiate(prefabToSpawn, spawnPoint, Quaternion.LookRotation(cameraToFace.transform.forward, Vector3.up));
+            Addressables.LoadAssetAsync<GameObject>(prefabAddress).Completed += handle =>
+            {
+                if (handle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    GameObject prefab = handle.Result;
+                    GameObject spawned = Instantiate(prefab, spawnPoint, spawnRotation);
 
-        if (randomYRotation)
-        {
-            float randomY = UnityEngine.Random.Range(-yRotationRange, yRotationRange);
-            spawned.transform.Rotate(Vector3.up, randomY);
-        }
+                    if (randomYRotation)
+                    {
+                        float randomY = UnityEngine.Random.Range(-yRotationRange, yRotationRange);
+                        spawned.transform.Rotate(Vector3.up, randomY);
+                    }
 
-        // Load and spawn visualization effect if set
-        if (!string.IsNullOrEmpty(spawnEffectName))
-        {
-            GameObject effectPrefab = Resources.Load<GameObject>(spawnEffectName);
-            if (effectPrefab != null)
-                Instantiate(effectPrefab, spawnPoint, spawned.transform.rotation);
-            else
-                Debug.LogWarning($"Spawn effect '{spawnEffectName}' not found in Resources.");
-        }
+                    spawnedObject = spawned;
+                    lastSpawnedPrefabName = prefabAddress;
 
-        OnObjectSpawned?.Invoke(spawned);
-
-        spawnedObject = spawned;
-        if (magicScaler != null)
-            magicScaler.SetTargetObject(spawnedObject);
-
-        lastSpawnedPrefabName = prefabName;
-
+                    OnObjectSpawned?.Invoke(spawned);
+                    if (magicScaler != null) magicScaler.SetTargetObject(spawnedObject);
+                }
+                else
+                {
+                    Debug.LogError($"Failed to load addressable prefab '{prefabAddress}'");
+                }
+            };
     }
 
+    public void Spawn(string prefabName)
+    {        
+       SpawnAsync($"Prefabs/{prefabName}");
+    }
 
     public void ScaleUp()
     {

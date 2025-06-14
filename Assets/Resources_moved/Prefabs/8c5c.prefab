@@ -252,11 +252,11 @@ MonoBehaviour:
   _interactorFilters: []
   _maxInteractors: -1
   _maxSelectingInteractors: 1
-  _data: {fileID: 0}
+  _data: {fileID: 4910050358236340708}
   _pointableElement: {fileID: 2405641398274335900}
-  _boundsCollider: {fileID: 7826123777660292809}
+  _boundsCollider: {fileID: 4811712926843281919}
   _colliders:
-  - {fileID: 7826123777660292809}
+  - {fileID: 4811712926843281919}
 --- !u!114 &2405641398274335900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 7357357032855245741}
   - component: {fileID: 7622738801413218193}
   - component: {fileID: 4274902219422465623}
-  - component: {fileID: 7826123777660292809}
+  - component: {fileID: 4811712926843281919}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -371,7 +371,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7826123777660292809
+--- !u!135 &4811712926843281919
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

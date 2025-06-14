@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6821186580823591081}
   - component: {fileID: 2642191788478194134}
   - component: {fileID: 6323284258757388374}
-  - component: {fileID: 742818626241067476}
+  - component: {fileID: 2663885987086750886}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -89,7 +89,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &742818626241067476
+--- !u!135 &2663885987086750886
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,9 +189,9 @@ MonoBehaviour:
   _maxSelectingInteractors: 1
   _data: {fileID: 0}
   _pointableElement: {fileID: 6637910405168814357}
-  _boundsCollider: {fileID: 742818626241067476}
+  _boundsCollider: {fileID: 2663885987086750886}
   _colliders:
-  - {fileID: 742818626241067476}
+  - {fileID: 2663885987086750886}
 --- !u!114 &6637910405168814357
 MonoBehaviour:
   m_ObjectHideFlags: 0

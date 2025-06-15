@@ -1,4 +1,4 @@
-# [![logo](https://skillicons.dev/icons?i=csharp)]() SpacesXR: Immersive Microbiology Lab
+# <img src="https://raw.githubusercontent.com/AshwinRaikar88/SpacesXR/refs/heads/main/Assets/Sprites/Icons/Spaces_logo.jpeg" width="48"> SpacesXR: Immersive Microbiology Lab
 
 **SpacesXR** is a extended reality application designed to help scientists, educators, and enthusiasts **visualize and explore complex biological data** 
 including molecules, proteins, and cellular structures—within a fully immersive 3D environment.
@@ -20,4 +20,4 @@ These are supported for v1.1.0
 - ✅ **Meta Quest 3s** – (fully supported)
 
 # Developed using
-[![My Skills](https://skillicons.dev/icons?i=csharp,unity,vscode,blender,windows)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=unity,vscode,blender,windows,cs)](https://skillicons.dev)

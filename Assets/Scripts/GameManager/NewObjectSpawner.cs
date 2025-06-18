@@ -9,6 +9,8 @@ public class NewObjectSpawner : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField]
     private Slider scaleSlider;
+    
+    [SerializeField] private ParticleSystem spawnVFX;
 
     public GameObject libraryPanel;
     public GameObject loadingText;
@@ -65,6 +67,11 @@ public class NewObjectSpawner : MonoBehaviour
             scaleSlider.maxValue = maxScale;
             scaleSlider.value = 0.001f;
         }        
+
+        if (spawnVFX != null)
+        {
+            spawnVFX.Stop();
+        }
     }
 
     // void Start()
@@ -92,6 +99,11 @@ public class NewObjectSpawner : MonoBehaviour
         {
             Destroy(spawnedObject);
             spawnedObject = null;
+        }
+
+        if (spawnVFX != null)
+        {
+            spawnVFX.Play();
         }
 
         lastSpawnedPrefabName = prefabAddress;
@@ -126,6 +138,11 @@ public class NewObjectSpawner : MonoBehaviour
             libraryPanel.SetActive(true);
             loadingText.SetActive(false);
             isSpawning = false;
+
+            if (spawnVFX != null)
+            {
+                spawnVFX.Stop();
+            }
         };
     }
 

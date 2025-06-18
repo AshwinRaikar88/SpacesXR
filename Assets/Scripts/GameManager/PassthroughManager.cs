@@ -24,4 +24,13 @@ public class PassthroughManager : MonoBehaviour
             
         }
     }
+
+    public void SetPassthrough(bool isActive)
+    {
+        if (passthroughLayer != null)
+        {
+            passthroughLayer.enabled = isActive;            
+            virtualEnvironment.SetActive(!isActive);            
+        }
+    }
 }

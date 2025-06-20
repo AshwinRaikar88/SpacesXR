@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-public class NewObjectSpawner : MonoBehaviour
+public class XRSpawnManager : MonoBehaviour
 {
     [Header("Audio Settings")]
     [SerializeField]

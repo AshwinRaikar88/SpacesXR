@@ -3,10 +3,17 @@ using Oculus.Interaction.Input;
 
 public class MagicScaler : MonoBehaviour
 {
-    [SerializeField] private Hand leftHand;
-    [SerializeField] private Hand rightHand;
-    [SerializeField] public GameObject targetObject;
-    [SerializeField] private float scaleSpeed = 5f;
+    [SerializeField]
+    private Hand leftHand;
+
+    [SerializeField]
+    private Hand rightHand;
+
+    [SerializeField]
+    public GameObject targetObject;
+
+    [SerializeField]
+    private float scaleSpeed = 5f;
 
     private bool wasPinching = false;
     private float initialDistance = 0f;

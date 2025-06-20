@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnToggleHandler : MonoBehaviour
 {
-    public NewObjectSpawner spawner;
+    public XRSpawnManager spawner;
     public ObjectDescriptionManager descriptionManager;
     public string prefabName;
     public string title;

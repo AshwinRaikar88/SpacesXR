@@ -4,7 +4,9 @@ using UnityEngine;
 public class PassthroughManager : MonoBehaviour
 {
     public OVRPassthroughLayer passthroughLayer;
-    public GameObject virtualEnvironment;
+
+    [SerializeField]
+    private GameObject virtualEnvironment;    
 
     void Start()
     {
@@ -21,7 +23,7 @@ public class PassthroughManager : MonoBehaviour
             bool isActive = passthroughLayer.enabled;
             virtualEnvironment.SetActive(isActive);
             passthroughLayer.enabled = !isActive;
-            
+
         }
     }
 
@@ -29,7 +31,7 @@ public class PassthroughManager : MonoBehaviour
     {
         if (passthroughLayer != null)
         {
-            passthroughLayer.enabled = isActive;            
+            passthroughLayer.enabled = isActive;
             virtualEnvironment.SetActive(!isActive);            
         }
     }

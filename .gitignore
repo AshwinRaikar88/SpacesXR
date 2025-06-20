@@ -10,6 +10,19 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Ignore Addressables build artifacts and reports
+# Ignore Addressables build outputs
+Assets/StreamingAssets/aa/*
+!Assets/StreamingAssets/aa/.gitkeep
+
+AddressableAssetsData/**/*.bin*
+AddressableAssetsData/**/*.hash
+AddressableAssetsData/**/*.catalog
+AddressableAssetsData/**/buildlayout.txt
+AddressableAssetsData/**/*.bundle
+AddressableAssetsData/**/*.json
+!AddressableAssetsData/**/*.asset
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
